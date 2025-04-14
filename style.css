@@ -1,0 +1,196 @@
+:root{
+    --black: #090A0A;
+    --gray: #737373;
+    --light-gray: #8a8a8a;
+    --white: #fff;
+    --orange: #B34215;
+    --brown: #F1CB8A;
+    --light-brown: #F2D5A5;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: HumanistBt;
+    src: url(fonts/Humanist521BT.ttf);
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    width: 100%;
+    
+}
+
+header{
+    position: fixed;
+    bottom: 10%;
+    width: 40%;
+    background-color: var(--black);
+    padding: 5px 20px;
+    border-radius: 50px;
+    margin: 0 30%; 
+    z-index: 1;
+    font-family: HumanistBt, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header nav a{
+   text-decoration: none;
+   color: var(--white);
+   cursor: pointer;
+   padding: 10px;
+}
+
+header nav a:last-child{
+    background-color: var(--gray);
+    border-radius: 50px;
+}
+
+header nav a:last-child:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+nav  i{
+    color: var(--gray);
+    padding: 15px;
+    font-size: 20px;
+}
+
+nav a:hover{
+    color: var(--gray);
+}
+
+nav a:active{
+    background-color: var(--gray);
+}
+
+
+nav i:hover{
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: fadeCycle 25s infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.slide img{
+    width: 200px;
+    height: 200px;
+}
+
+.slide h1{
+    font-size: 8em;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+#slide1 {
+    animation-delay: 0s;
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c34fee7c31fcb2f8c3700b_001-p-1080.jpg);
+}
+
+#slide2 {
+    animation-delay: 5s;
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65e5b8b549a7aac5dba0e7d3_ankole_kilimani_nightlife.jpg);
+}
+
+#slide3 {
+    animation-delay: 10s;
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c5f9644676e29dddf08c65_ankolegrill_t-bone-steak-2024-1.jpg);
+}
+
+#slide4 {
+    animation-delay: 15s;
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c3b0c67153d0056443f31e_ankolegrill_escobar1.jpg);
+}
+
+#slide5 {
+    animation-delay: 20s;
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65cb61d8c46dc657819e1cc2_ankolegrill_slider-p-1080.jpg);
+}
+
+@keyframes fadeCycle {
+    0% {
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    28% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+footer{
+    position: fixed;
+    right: 1%;
+    z-index: 1;
+    top: 10%;
+}
+
+footer i{
+    color: var(--gray);
+    border-radius: 50%;
+    padding: 10px;
+    border: solid var(--gray) 1px;
+    margin: 10px;
+}
+
+footer .bottom i{
+    position: fixed;
+    bottom: 10%;
+    background-color: var(--black);
+    padding: 15px;
+    color: var(--white);
+    font-size: 25px;
+}
+
+/* menu page */
+.menus{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
