@@ -160,7 +160,7 @@ nav i:hover{
 
 footer{
     position: fixed;
-    right: 1%;
+    right: 5%;
     z-index: 1;
     top: 10%;
 }
@@ -204,6 +204,8 @@ footer .bottom i{
     width: 100%;
     height: 100%;
 }
+
+
 
 .menu{
     padding: 21% 0;
@@ -274,6 +276,8 @@ footer .bottom i{
     color: var(--orange);
     font-size: 70px;
     font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 1em;
 }
 
 .single-menu .right{
@@ -327,6 +331,10 @@ footer .bottom i{
     gap: 5%;
 }
 
+.imaged-cont h3{
+    margin: 0;
+}
+
 .foods h2{
     font-weight: 600;
     color: #B34215;
@@ -344,7 +352,7 @@ footer .bottom i{
     text-align: center;
 }
 
-.reviews .heading{
+.heading{
     padding-top: 5%;
 }
 
@@ -401,4 +409,156 @@ footer .bottom i{
 .reviews .content .testimonials .testimony .text{
     position: absolute;
     top: 25%;
+}
+
+/* events pages */
+.events{
+    /* width: 100%; */
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.events .event-list{
+    height: 100vh;
+    overflow-x: auto;
+    display: flex;
+}
+
+.event-list .event{
+    width: 40%;
+    background-repeat: no-repeat;
+}
+
+#event1{
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe2b90d2cc28fd4a80_accra-p-500.jpg);
+}
+
+#event2{
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65e86d89c0ebe6000d4a549a_nairobi_pavilion_2024.jpg);
+}
+
+#event3{
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe4fa225ceb84e736c_Zanzibar-p-500.jpg);
+}
+
+#event4{
+    background-image: url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe5863a791395eba11_Addis.jpg);
+}
+
+@media  screen and (max-width: 700px)  {
+    .menus .menu-container, .single-menu{
+        display: block;
+        overflow-y: auto;
+    }
+
+    .menu{
+        width: 100%;
+        height: 70%;
+        padding-top: 60%;
+    }
+
+    .single-menu .right, .single-menu .left{
+        width: 100%;
+    }
+
+    .single-menu .right nav{
+        width: 80%;
+        font-size: 12px;
+    }
+
+
+    .imaged img{
+        width: 50px;
+        height: 50px;
+    }
+
+    footer .top{
+        display: grid;
+        
+    }
+
+    footer .top i{
+        margin: 2px;
+        padding: 5px;
+    }
+
+    footer .bottom i{
+        bottom: 15%;
+        padding: 10px;
+        right: 3%;
+    }
+
+    header{
+        width: 80%;
+        margin: 0 10%;
+    }
+    header nav a:not(:last-child){
+        display: none;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+
+    p{
+       font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:990px) and (min-width: 701px) {
+    .menus .menu-container, .single-menu {
+        display: block;
+        overflow-y: auto;
+    }
+
+    .menu {
+        width: 100%;
+        height: 50%;
+        padding-top: 30%;
+    }
+
+    .single-menu .right,
+    .single-menu .left {
+        width: 100%;
+    }
+
+    .single-menu .right{
+        margin: 0;
+    }
+
+    .single-menu .right nav {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    header {
+        width: 30%;
+        margin: 0 35%;
+
+    }
+
+    header nav a:not(:last-child) {
+        display: none;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
