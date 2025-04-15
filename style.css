@@ -73,11 +73,6 @@ nav a:hover{
     color: var(--gray);
 }
 
-nav a:active{
-    background-color: var(--gray);
-}
-
-
 nav i:hover{
     background-color: var(--white);
     border-radius: 50%;
@@ -190,7 +185,220 @@ footer .bottom i{
 /* menu page */
 .menus{
     width: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo{
+    position: absolute;
+    padding-top: 5%;
+    width: 100%;
+}
+
+.menu-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    padding: 21% 0;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.menu:first-child{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c34fee7c31fcb2f8c3700b_001-p-1080.jpg);
+}
+
+.menu:last-child{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.8)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65e5a29a2a2b1c4a493fff75_ankolegrill_Kilimani-Nights-p-500.jpg);
+}
+
+.menu h2{
+    color: var(--orange);
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.menu h1{
+    color: var(--white);
+    font-size: 3em;
+    margin: 0;
+}
+
+.menu p{
+    color: var(--white);
+    font-weight: 600;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+/* single menu page */
+.single-menu{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.single-menu .left{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c4760165c03d467b650bcb_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5%;
+    color: var(--white);
+    
+}
+
+.single-menu .left h2{
+    margin-top: 10%;
+    font-weight: 700;
+}
+
+.single-menu .left h1{
+    color: var(--orange);
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.single-menu .right{
+    width: 50%;
+    background-color: var(--black);
+    color: var(--white);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-color:  var(--black), var(--gray);
+    scrollbar-width: thin;
+    padding: 0 3%;
+}
+
+.single-menu .right nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% auto;
+    width: 70%;
+}
+
+.single-menu .right nav a{
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.single-menu .right nav a:hover, .active{
+    color: var(--brown);
+}
+
+.single-menu .right .breakfast h2:nth-child(2){
+    color: var(--orange);
+}
+
+.priced, .imaged{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.imaged img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.imaged-cont{
+    display: flex;
+    gap: 5%;
+}
+
+.foods h2{
+    font-weight: 600;
+    color: #B34215;
+}
+
+/* review page */
+.reviews{
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reviews .heading{
+    padding-top: 5%;
+}
+
+.reviews .heading h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.reviews .content{
+    display: flex;
+    width: 50%;
+    margin: 10% auto;
+
+}
+
+.reviews .content i{
+    color: var(--gray);
+    font-size: 30px;
+    align-items: center;
+}
+
+.reviews .content .testimonials{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.testimonials .testimony{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.testimonials .testimony:not(:nth-child(2)){
+    display: none;
+}
+
+.testimonials .testimony i{
+    font-size: 30px;
+    color: var(--orange);
+}
+
+.testimonials .testimony i:first-child {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.testimonials .testimony i:last-child {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+}
+
+.reviews .content .testimonials .testimony .text{
+    position: absolute;
+    top: 25%;
 }
