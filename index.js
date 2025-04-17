@@ -1,6 +1,5 @@
 
 function toggleDropdown() {
-    e.preventDefault()
     document.getElementsByClassName("fa-bars").classList.toggle("show");
 }
 
@@ -17,3 +16,27 @@ window.onclick = function (event) {
         }
     }
 }
+
+let reviewIndex = 1;
+
+
+function plusSlides(n) {
+    console.log({reviewIndex});
+    
+    showSlides(reviewIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("testimony");
+    
+    if (n > slides.length) { reviewIndex = 1 }
+    if (n < 1) { reviewIndex = slides.length }
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[reviewIndex - 1].style.display = "block";
+}
+
+showSlides(reviewIndex);
