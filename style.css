@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: Typewriter;
-    src: url(fonts/American\ Typewriter\ Regular/);
+    src: url(fonts/American\ Typewriter\ Regular.ttf);
 }
 
 body{
@@ -32,7 +32,7 @@ body{
 
 header{
     position: fixed;
-    bottom: 10%;
+    bottom: 5%;
     width: 40%;
     background-color: var(--black);
     padding: 5px 20px;
@@ -263,7 +263,7 @@ footer{
 
     .bottom i {
         position: fixed;
-        bottom: 10%;
+        bottom: 5%;
         background-color: var(--black);
         padding: 15px;
         color: var(--white);
@@ -457,33 +457,27 @@ footer{
         width: 50%;
         margin: 0% auto;
         align-items: center;
+        justify-content: space-between;
         position: relative;
         padding: 2em;
 
         .prev, .next{
             cursor: pointer;
-            /* padding: 1em; */
-            /* position: relative; */
+            position: relative;
             user-select: none;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
         }
 
         .prev i, .next i{
             display: inline-block;
-        }
-
-        .prev{
-            align-self: flex-end;
-        }
-
-        .next{
-            align-self: flex-start;
-        }
-
-        i {
             color: var(--gray);
             font-size: 30px;
-            align-items: center;
             cursor: pointer;
+            position: relative;
+            z-index: 2;
         }
 
         .testimonials {
@@ -501,7 +495,7 @@ footer{
                 align-items: center;
                 text-align: center;
                 position: relative;
-                padding: 2em;
+                padding: 5em 2em;
 
                 i {
                     font-size: 30px;
@@ -525,16 +519,12 @@ footer{
 
                 .text{
                     width: 100%;
-                }
+                }           
             }
 
             .testimony.active{
                 display: flex;
-            }
-
-            .testimony[style="display: flex"]{
-                opacity: 1;
-            }            
+            }           
         }
     }
 
@@ -789,6 +779,17 @@ footer{
             }
         }
     }
+}
+
+.single-live{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(https://cdn.prod.website-files.com/65aa1f79e2380ad0548de567/67e3e65e75e1622a029e77b9_%40ankolegrill%20Live%2042.jpg);
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    background-position: top;
+    background-size: cover;
+    overflow-y: auto;
 }
 
 @media  screen and (max-width: 700px)  {

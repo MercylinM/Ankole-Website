@@ -25,6 +25,20 @@ document.addEventListener("click", function(event){
     }
 })
 
+// active
+document.addEventListener("DOMContentLoaded", () => {
+    const navlinks = document.querySelectorAll(".navlink");
+    const current = window.location.pathname;
+
+    navlinks.forEach(link => {
+        if (link.getAttribute('href') === current || link.getAttribute('href') === '.' + current) {
+            link.classList.add('active');
+        }
+        else {
+            link.classList.remove('active');
+        }
+    });
+});
 
 // reviews
 let reviewIndex = 0;
@@ -47,22 +61,3 @@ function showSlides(n) {
 }
 
 
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     showSlides(reviewIndex)
-// });
-
-
-// active
-document.addEventListener("DOMContentLoaded", () => {
-    const navlinks = document.querySelectorAll(".navlink");
-    const current = window.location.pathname;
-
-    navlinks.forEach(link => {
-        if (link.getAttribute('href') === current || link.getAttribute('href') === '.' + current){
-            link.classList.add('active');
-        }else{
-            link.classList.remove('active');
-        }
-    });
-});
