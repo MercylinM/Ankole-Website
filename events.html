@@ -11,8 +11,9 @@
 <body>
     <header>
         <nav>
-            <i class="fa-solid fa-bars" onclick="toggleDropdown()">
-                <div class="vertical-menu">
+             <div class="menu-toggle" onclick="toggleDropdown()">
+                <i class="fa-solid fa-bars" ></i>
+                <div class="vertical-menu" id="dropdown">
                     <a href="index.html">Home</a>
                     <a href="index.html">Our Story</a>
                     <a href="menu.html">Menu</a>
@@ -23,9 +24,12 @@
                     <a href="live.html">Live </a>
                     <a href="contacts.html">Contacts</a>
                 </div>
-            </i>
-            <i class="fas fa-clock">
-                <div class="hours">
+
+            </div>
+            
+            <div class="clock-toggle" onclick="toggleHours()">
+                <i class="fas fa-clock"></i>
+                <div class="hours" id="hours-dropdown">
                     <h3>Opening Hours</h3>
                     <h2>
                         Kitisuru
@@ -41,7 +45,7 @@
                         7.30am - 11.00pm
                     </p>
                 </div>
-            </i>
+            </div>
             <a href="/index.html" class="navlink active">Home</a>
             <a href="/menu.html" class="navlink">Menu</a>
             <a href="/reviews.html" class="navlink">Reviews</a>
@@ -100,11 +104,17 @@
     <!-- footer -->
     <footer>
         <div class="top">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <a href="" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
         </div>
         <div class="bottom">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <a href="" target="_blank">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
         </div>
     </footer>
 

@@ -1,42 +1,68 @@
-
+// dropdowns
 function toggleDropdown() {
-    document.getElementsByClassName("fa-bars").classList.toggle("show");
+    const dropdown = document.getElementById("dropdown");
+    dropdown.classList.toggle("show");
 }
 
-// Close the dropdown menu if the user clicks outside of it and click the links inside the dropdown
-window.onclick = function (event) {
-    if (!event.target.matches('.fa-bars')) {
-        var dropdowns = document.getElementsByClassName("vertical-menu");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
+function toggleHours() {
+    const dropdown = document.getElementById("hours-dropdown");
+    dropdown.classList.toggle("show");
+}
+
+document.addEventListener("click", function(event){
+    const menu = document.getElementById("dropdown");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    const hours = document.getElementById("hours-dropdown");
+    const clockToggle = document.querySelector(".clock-toggle");
+
+    if(!menuToggle.contains(event.target)){
+        menu.classList.remove("show");
     }
-}
 
-let reviewIndex = 1;
+    if (!clockToggle.contains(event.target)) {
+        hours.classList.remove("show");
+    }
+})
 
+
+// reviews
+let reviewIndex = 0;
+showSlides(reviewIndex);
 
 function plusSlides(n) {
-    console.log({reviewIndex});
-    
     showSlides(reviewIndex += n);
 }
 
+
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("testimony");
-    
-    if (n > slides.length) { reviewIndex = 1 }
-    if (n < 1) { reviewIndex = slides.length }
-    
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[reviewIndex - 1].style.display = "block";
+    const slides = document.querySelectorAll(".testimony");
+
+    if (n > slides.length) reviewIndex = 0;
+    if (n < 0) reviewIndex = slides.length - 1;
+
+    slides.forEach(slide => {slide.classList.remove('active')});
+
+    slides[reviewIndex].classList.add('active')
 }
 
-showSlides(reviewIndex);
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     showSlides(reviewIndex)
+// });
+
+
+// active
+document.addEventListener("DOMContentLoaded", () => {
+    const navlinks = document.querySelectorAll(".navlink");
+    const current = window.location.pathname;
+
+    navlinks.forEach(link => {
+        if (link.getAttribute('href') === current || link.getAttribute('href') === '.' + current){
+            link.classList.add('active');
+        }else{
+            link.classList.remove('active');
+        }
+    });
+});

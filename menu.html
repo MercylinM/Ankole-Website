@@ -8,52 +8,56 @@
     <script src="https://kit.fontawesome.com/1df1736bb2.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- header -->
-    <header>
-        <nav>
-            <i class="fa-solid fa-bars" onclick="toggleDropdown()">
-                <div class="vertical-menu">
-                    <a href="index.html">Home</a>
-                    <a href="index.html">Our Story</a>
-                    <a href="menu.html">Menu</a>
-                    <a href="reviews.html">Reviews</a>
-                    <a href="index.html">Careers</a>
-                    <a href="events.html">Events</a>
-                    <a href="index.html">Gallery</a>
-                    <a href="live.html">Live </a>
-                    <a href="contacts.html">Contacts</a>
-                </div>
-            </i>
-            <i class="fas fa-clock">
-                <div class="hours">
-                    <h3>Opening Hours</h3>
-                    <h2>
-                        Kitisuru
-                    </h2>
-                    <p>
-                        Mon - Sun <br>
-                        9.00am - 11.00pm
-                    </p>
-
-                    <h2>Kilimani</h2>
-                    <p>
-                        Mon - Sun <br>
-                        7.30am - 11.00pm
-                    </p>
-                </div>
-            </i>
-            <a href="/index.html" class="navlink active">Home</a>
-            <a href="/menu.html" class="navlink">Menu</a>
-            <a href="/reviews.html" class="navlink">Reviews</a>
-            <a href="/events.html" class="navlink">Events</a>
-            <a href="/live.html" class="navlink">Live</a>
-            <a href="/contacts.html" class="navlink">Contacts</a>
-            <a href="/reservation.html" class="navlink">Reservations</a>   
-        </nav>
-    </header>
-
     <!-- main -->
     <section class="menus">
+        <!-- header -->
+        <header>
+            <nav>
+                <div class="menu-toggle" onclick="toggleDropdown()">
+                    <i class="fa-solid fa-bars" ></i>
+                    <div class="vertical-menu" id="dropdown">
+                        <a href="index.html">Home</a>
+                        <a href="index.html">Our Story</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="reviews.html">Reviews</a>
+                        <a href="index.html">Careers</a>
+                        <a href="events.html">Events</a>
+                        <a href="index.html">Gallery</a>
+                        <a href="live.html">Live </a>
+                        <a href="contacts.html">Contacts</a>
+                    </div>
+
+                </div>
+                
+                <div class="clock-toggle" onclick="toggleHours()">
+                    <i class="fas fa-clock"></i>
+                    <div class="hours" id="hours-dropdown">
+                        <h3>Opening Hours</h3>
+                        <h2>
+                            Kitisuru
+                        </h2>
+                        <p>
+                            Mon - Sun <br>
+                            9.00am - 11.00pm
+                        </p>
+
+                        <h2>Kilimani</h2>
+                        <p>
+                            Mon - Sun <br>
+                            7.30am - 11.00pm
+                        </p>
+                    </div>
+                </div>
+                <a href="/index.html" class="navlink active">Home</a>
+                <a href="/menu.html" class="navlink">Menu</a>
+                <a href="/reviews.html" class="navlink">Reviews</a>
+                <a href="/events.html" class="navlink">Events</a>
+                <a href="/live.html" class="navlink">Live</a>
+                <a href="/contacts.html" class="navlink">Contacts</a>
+                <a href="/reservation.html" class="navlink">Reservations</a>   
+            </nav>
+        </header>
+
         <div class="logo">
             <img src="images/ankole-logo.png" alt="ankole logo" width="200px" height="200px">
         </div>
@@ -77,13 +81,19 @@
     </section>
 
     <!-- foofer -->
-     <footer>
+    <footer>
         <div class="top">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <a href="" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
         </div>
         <div class="bottom">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <a href="" target="_blank">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
         </div>
     </footer>
 

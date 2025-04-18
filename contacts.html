@@ -10,8 +10,9 @@
 <body>
     <header>
         <nav>
-            <i class="fa-solid fa-bars" onclick="toggleDropdown()">
-                <div class="vertical-menu">
+             <div class="menu-toggle" onclick="toggleDropdown()">
+                <i class="fa-solid fa-bars" ></i>
+                <div class="vertical-menu" id="dropdown">
                     <a href="index.html">Home</a>
                     <a href="index.html">Our Story</a>
                     <a href="menu.html">Menu</a>
@@ -22,9 +23,12 @@
                     <a href="live.html">Live </a>
                     <a href="contacts.html">Contacts</a>
                 </div>
-            </i>
-            <i class="fas fa-clock">
-                <div class="hours">
+
+            </div>
+            
+            <div class="clock-toggle" onclick="toggleHours()">
+                <i class="fas fa-clock"></i>
+                <div class="hours" id="hours-dropdown">
                     <h3>Opening Hours</h3>
                     <h2>
                         Kitisuru
@@ -40,8 +44,8 @@
                         7.30am - 11.00pm
                     </p>
                 </div>
-            </i>
-            <a href="/index.html" class="navlink active">Home</a>
+            </div>
+            <a href="/index.html" class="navlink">Home</a>
             <a href="/menu.html" class="navlink">Menu</a>
             <a href="/reviews.html" class="navlink">Reviews</a>
             <a href="/events.html" class="navlink">Events</a>
@@ -59,20 +63,20 @@
         <div class="branches">
             <div class="location">
                 <h1>Kitisuru</h1>
-                <p>Address:<a href=""> 0.6A, Kitisuru Rd, Nairobi</a></p>
+                <p>Address:<a href="https://www.google.com/maps/place/Ankole+Grill+Kitisuru/@-1.2406933,36.7874133,17z/data=!3m1!4b1!4m6!3m5!1s0x182f1700463776b5:0xf0eb54364bfb4030!8m2!3d-1.2406933!4d36.7874133!16s%2Fg%2F11mhq4xbsk?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank"> 0.6A, Kitisuru Rd, Nairobi</a></p>
                 <p>Hours: <span>Open 9 am ⋅ Closes 11 pm</span></p>
-                <p>Bookings & Orders: <a href="telto:">0703 212 121 / 0701 138 345</a></p>
-                <p>Email: <a href="mailto:">sales@ankole.co.ke</a> <br>
-                <a href="mailto:">events@ankole.co.ke</a></p>   
+                <p>Bookings & Orders: <a href="tel:" target="_blank">0703 212 121</a> / <a href="tel:" target="_blank">0701 138 345</a></p>
+                <p>Email: <a href="mailto:sales@ankole.co.ke" target="_blank">sales@ankole.co.ke</a> <br>
+                <a href="mailto:events@ankole.co.ke" target="_blank">events@ankole.co.ke</a></p>   
             </div>
 
             <div class="location">
                 <h1>Kilimani</h1>
-                <p>Address:<a href=""> PQ6M+R2X, Galana Rd, Nairobi</a></p>
+                <p>Address:<a href="https://www.google.com/maps/place/Ankole+Grill+Kilimani/@-1.2892286,36.7833693,17z/data=!3m1!4b1!4m6!3m5!1s0x182f10a79666e9a5:0x4be9f57a214e2fdb!8m2!3d-1.2892286!4d36.7833693!16s%2Fg%2F11dzz_fbbd?entry=ttu&g_ep=EgoyMDI1MDQxNC4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank"> PQ6M+R2X, Galana Rd, Nairobi</a></p>
                 <p>Hours: <span>Open Mon - Fri: 7:30 am ⋅ Closes 11 pm</span> <br><span>Sat & Sun: 9:00am - 11pm</span></p>
-                <p>Bookings & Orders: <a href="telto:">0710 202 020</a></p>
-                <p>Email: <a href="mailto:">sales@ankole.co.ke</a> <br>
-                <a href="mailto:">events@ankole.co.ke</a></p> 
+                <p>Bookings & Orders: <a href="tel:" target="_blank">0710 202 020</a></p>
+                <p>Email: <a href="mailto:sales@ankole.co.ke" target="_blank">sales@ankole.co.ke</a> <br>
+                <a href="mailto:events@ankole.co.ke" target="_blank">events@ankole.co.ke</a></p> 
             </div>
         </div>
     </section>
@@ -80,11 +84,17 @@
     <!-- footer -->
     <footer>
         <div class="top">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <a href="" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
         </div>
         <div class="bottom">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <a href="" target="_blank">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
         </div>
     </footer>
 

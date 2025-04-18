@@ -17,6 +17,11 @@
     src: url(fonts/Humanist521BT.ttf);
 }
 
+@font-face {
+    font-family: Typewriter;
+    src: url(fonts/American\ Typewriter\ Regular/);
+}
+
 body{
     margin: 0;
     overflow-x: hidden;
@@ -34,119 +39,132 @@ header{
     border-radius: 50px;
     margin: 0 30%; 
     z-index: 1;
-    /* font-family: HumanistBt, sans-serif; */
+    font-family: HumanistBt, sans-serif;
     justify-content: center;
     align-items: center;
-}
 
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
 
-header nav a{
-   text-decoration: none;
-   color: var(--white);
-   cursor: pointer;
-   padding: 10px;
-}
-
-header nav a:last-child{
-    background-color: var(--gray);
-    border-radius: 50px;
-}
-
-header nav a:last-child:hover {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-
-
-nav  i{
-    color: var(--gray);
-    padding: 15px;
-    font-size: 20px;
-    position: relative;
-    cursor: pointer;
-}
-
-nav i:nth-child(1) {
-    .vertical-menu {
-        display: none;
-        position: absolute;
-        bottom: 3em;
-        left: 0;
-        width: 12em;
-        background-color: var(--black);
-        color: var(--white);
-        padding: 2em 1em;
-        border-radius: 20px;
-        font-family: unset !important;
-
-        a{
-            border-bottom: 1px solid var(--gray);
-            display: block;
-            font-family: unset !important;
-            text-transform: capitalize !important;
+        a {
+            text-decoration: none;
+            color: var(--white);
+            cursor: pointer;
+            padding: 10px;
         }
 
-        a:last-child{
-            background-color: unset !important;
-            border-radius: unset !important;
-            
-        }
-    }
-}
-
-nav i:nth-child(2){
-    .hours{
-        display: none;
-        position: absolute;
-        bottom: 3em;
-        width: 12em;
-        background-color: var(--white);
-        color: var(--black);
-        padding:  2em 1em;
-        border-radius: 20px;
-
-        h3{
-            font-size: 14px;
+        a:last-child {
+            background-color: var(--gray);
+            border-radius: 50px;
         }
 
-        h2{
+        a:last-child:hover {
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        a:hover {
+            color: var(--gray);
+        }
+
+        .navlink.active{
+            background-color: rgba(78, 78, 78, 0.2);
+        }
+
+        i {
+            color: var(--gray);
+            padding: 15px;
             font-size: 20px;
+            position: relative;
+            cursor: pointer;
         }
 
-        p{
-            font-size: 12px;
+        i:hover {
+            background-color: var(--white);
+            border-radius: 50%;
+        }
+
+        .menu-toggle{
+            position: relative;
+            display: inline-block;
+
+            .vertical-menu {
+                display: none;
+                position: absolute;
+                bottom: 4em;
+                left: 0;
+                width: 12em;
+                background-color: var(--black);
+                color: var(--white);
+                padding: 0.5em 1em;
+                border-radius: 20px;
+                font-family: unset !important;
+                z-index: 1;
+                text-align: start;
+        
+                a {
+                    border-bottom: 1px solid var(--gray);
+                    display: block;
+                    text-decoration: none;
+                    padding: 0.75em 1em;
+                    font-family: unset !important;
+                    text-transform: capitalize !important;
+                }
+        
+                a:last-child {
+                    background-color: unset !important;
+                    border-radius: unset !important;
+                }
+        
+                a:last-child:hover {
+                    color: var(--gray) !important;
+                    /* border-radius: unset !important; */
+                }
+            }
+
+            .vertical-menu.show{
+                display: block;
+            }
+        }
+
+        .clock-toggle{
+            position: relative;
+            display: inline-block;
+
+            .hours {
+                display: none;
+                position: absolute;
+                bottom: 3em;
+                width: 12em;
+                background-color: var(--white);
+                color: var(--black);
+                padding: 2em 1em;
+                border-radius: 20px;
+                text-align: start;
+                z-index: 1;
+            
+                h3 {
+                    font-size: 14px;
+                }
+            
+                h2 {
+                    font-size: 20px;
+                }
+            
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .hours.show{
+                display: block;
+            }
         }
     }
-}
 
-nav i:hover{
-    .hours, .vertical-menu{
-        display: block;
-    }
-}
-
-.show{
-    display: block;
-}
-
-nav a:hover{
-    color: var(--gray);
-}
-
-nav i:hover{
-    background-color: var(--white);
-    border-radius: 50%;
-}
-
-.active{
-    background-color: rgba(85, 85, 85, 0.5);
 }
 
 .slideshow {
@@ -234,23 +252,23 @@ footer{
     right: 5%;
     z-index: 1;
     top: 10%;
-}
 
-footer i{
-    color: var(--gray);
-    border-radius: 50%;
-    padding: 10px;
-    border: solid var(--gray) 1px;
-    margin: 10px;
-}
+    i {
+        color: var(--gray);
+        border-radius: 50%;
+        padding: 10px;
+        border: solid var(--gray) 1px;
+        margin: 10px;
+    }
 
-footer .bottom i{
-    position: fixed;
-    bottom: 10%;
-    background-color: var(--black);
-    padding: 15px;
-    color: var(--white);
-    font-size: 25px;
+    .bottom i {
+        position: fixed;
+        bottom: 10%;
+        background-color: var(--black);
+        padding: 15px;
+        color: var(--white);
+        font-size: 25px;
+    }
 }
 
 /* menu page */
@@ -262,6 +280,7 @@ footer .bottom i{
     text-align: center;
     position: relative;
     overflow: hidden;
+    
 
     .logo {
         position: absolute;
@@ -321,6 +340,11 @@ footer .bottom i{
     display: flex;
     height: 100vh;
     overflow: hidden;
+
+    header{
+        margin: 0;
+        left: 5%;
+    }
 
     .left {
         width: 50%;
@@ -415,7 +439,6 @@ footer .bottom i{
     background-color: var(--black);
     color: var(--white);
     height: 100vh;
-    overflow: hidden;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -432,8 +455,29 @@ footer .bottom i{
     .content {
         display: flex;
         width: 50%;
-        margin: 5% auto;
+        margin: 0% auto;
         align-items: center;
+        position: relative;
+        padding: 2em;
+
+        .prev, .next{
+            cursor: pointer;
+            /* padding: 1em; */
+            /* position: relative; */
+            user-select: none;
+        }
+
+        .prev i, .next i{
+            display: inline-block;
+        }
+
+        .prev{
+            align-self: flex-end;
+        }
+
+        .next{
+            align-self: flex-start;
+        }
 
         i {
             color: var(--gray);
@@ -443,14 +487,21 @@ footer .bottom i{
         }
 
         .testimonials {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            overflow-x: auto;
+            position: relative;
+            overflow: hidden;
 
             .testimony {
-                width: 80%;
-                display: flex;
-                margin: 0 auto;
-                /* position: relative; */
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                padding: 2em;
 
                 i {
                     font-size: 30px;
@@ -459,26 +510,31 @@ footer .bottom i{
 
                 i:first-child {
                     position: absolute;
-                    top: 50%;
-                    left: 25%;
+                    top: 2em;
+                    left: 0%;
+                    font-size: 2em;
+                    align-self: flex-start;
                 }
 
                 i:last-child {
                     position: absolute; 
-                    bottom: 32%; 
-                    right: 25%;
+                    bottom: 2em; 
+                    right: 0;
+                    align-self: flex-end;
                 }
 
-                .text {
-                    /* position: absolute; */
-                    margin: 0 auto;
+                .text{
+                    width: 100%;
                 }
             }
 
-            /* .testimony:not(:nth-child(2)) {
-                display: none;
-            } */
-             
+            .testimony.active{
+                display: flex;
+            }
+
+            .testimony[style="display: flex"]{
+                opacity: 1;
+            }            
         }
     }
 
