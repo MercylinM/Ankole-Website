@@ -797,7 +797,9 @@ footer{
     .single-menu, 
     .reservation,
     .contacts .branches,
-    .events .event-list{
+    .events .event-list,
+    .live,
+    .live .right .single-performance{
         display: block;
         overflow-y: auto;
         margin: 0;
@@ -814,8 +816,16 @@ footer{
     .reservation .heading,
     .reservation .form,
     .events .event-list .event,
+    .reviews .content,
+    .live .left,
+    .live .right,
     .slide{
         width: 100%;
+    }
+
+    .live .right .single-performance{
+        margin: 5%;
+        
     }
 
     .reservation .form {
@@ -861,7 +871,7 @@ footer{
     }
 
     footer .bottom i{
-        bottom: 15%;
+        bottom: 10%;
         padding: 10px;
         right: 3%;
     }
@@ -874,7 +884,7 @@ footer{
         display: none;
     }
 
-    .slide h1, 
+    .slideshow .slide h1, 
     .reservation .heading h1,
     h1{
         font-size: 3em;
@@ -894,7 +904,7 @@ footer{
 }
 
 @media only screen and (max-width:990px) and (min-width: 701px) {
-    .menus .menu-container, .single-menu, .reservation {
+    .menus .menu-container, .single-menu, .reservation, .live {
         display: block;
         overflow-y: auto;
     }
@@ -909,9 +919,21 @@ footer{
     .single-menu .left , 
     .reservation .form,
     .reservation .heading,
-    .contacts .branches
+    .contacts .branches,
+    .live .left,
+    .live .right,
     .slide{
         width: 100%;
+    }
+
+    .live .right .single-performance{
+        display: flex;
+        margin: 5%;
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
     }
 
     .contacts {
@@ -959,12 +981,12 @@ footer{
     }
 
     footer .bottom i {
-        bottom: 15%;
+        bottom: 10%;
         padding: 10px;
         right: 2%;
     }
 
-    .slide h1, h1 {
+    .slideshow .slide h1, h1 {
         font-size: 4em;
     }
 
