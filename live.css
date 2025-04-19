@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/live.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/images.jpeg);
     background-position: top;
     background-size: 100%;
     background-repeat: repeat-y;
