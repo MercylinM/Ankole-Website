@@ -481,8 +481,8 @@ footer{
     }
 
     .live .right .single-performance{
-        display: flex;
-        margin: 5%;
+        display: flex !important;
+        margin: 5% !important;
 
         img{
             width: 200px;
@@ -492,31 +492,31 @@ footer{
 
     .contacts {
         .branches {
-            padding: 5px;
+            padding: 5px !important;
 
             .location {
-                width: 50%;
+                width: 50% !important;
 
                 h1{
-                    font-size: 2em;
+                    font-size: 2em !important;
                 }
             }
         }
     }
 
     .reservation .form{
-        padding-top: 3%;
-        padding-bottom: 20%;
+        padding-top: 3% !important;
+        padding-bottom: 20% !important;
     }
 
     
     .single-menu .right{
-        margin: 0;
+        margin: 0 !important;
     }
 
     .single-menu .right nav {
-        width: 80%;
-        font-size: 14px;
+        width: 80% !important;
+        font-size: 14px !important;
     }
 
     header {
