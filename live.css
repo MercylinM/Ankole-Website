@@ -1,0 +1,111 @@
+.live {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/live.webp);
+    background-position: top;
+    background-size: 100%;
+    background-repeat: repeat-y;
+
+    .left {
+        width: 50%;
+        padding: 5% 0;
+
+        .logo {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--white);
+            font-size: 2em;
+            margin-top: 20%;
+            font-size: 2em;
+            font-weight: 500;
+            margin-bottom: 0;
+            font-family: Typewriter;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        h1 {
+            color: var(--orange);
+            font-size: 4em;
+            margin-top: 0;
+            font-family: HumanistBt;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        header {
+            margin-left: 5%;
+        }
+    }
+
+    .right {
+        width: 50%;
+        height: 100%;
+
+        .single-performance {
+            width: 80%;
+            margin: 0% auto;
+            padding: 2em;
+            display: flex;
+            align-items: center;
+            text-align: start;
+            gap: 5%;
+
+            a{
+                text-decoration: none;
+            }
+
+            a:hover{
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+                object-position: center;
+                object-fit: contain;
+                border-radius: 20px;
+                transition: 0.4s ease-in;
+            }
+
+            p:first-child {
+                color: var(--orange);
+                font-family: HumanistBt;
+            }
+
+            p:last-child {
+                color: var(--white);
+                font-size: 24px;
+                font-family: Typewriter;
+            }
+        }
+    }
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

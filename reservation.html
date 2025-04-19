@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservations</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reservation.css">
     <script src="https://kit.fontawesome.com/1df1736bb2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -64,9 +65,9 @@
         </div>
 
         <div class="form">
-            <form action="">
+            <form action="" id="reservationForm">
                 <label for="name">Name
-                    <input type="text">
+                    <input type="text" id="name" name="name" required>
                 </label>
 
                 <label for="location">Location
@@ -81,19 +82,19 @@
                 </label>
 
                 <label for="phone">
-                    <input placeholder="e.g 0700 000 000" type="tel" id="phone" required="">
+                    <input placeholder="e.g 0700 000 000" type="tel" id="phone" required pattern="[0-9]{10,13}">
                 </label>
 
                 <label for="guest">Number of Guests
-                    <input type="number" name="" id="guest" placeholder="(maximum of 8 guests only)">
+                    <input type="number" name="" id="guest" placeholder="(maximum of 8 guests only)" max="8" min="1" required>
                 </label>
 
                 <label for="date">Date
-                    <input type="date" name="date" id="date" >
+                    <input type="date" name="date" id="date" required>
                 </label>
 
                 <label for="time">Time
-                    <input type="time" name="time" id="time">
+                    <input type="time" name="time" id="time" required>
                 </label>
 
                 <button type="submit">Submit</button>
@@ -112,5 +113,6 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="reservation.js"></script>
 </body>
 </html>

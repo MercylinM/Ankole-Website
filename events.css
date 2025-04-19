@@ -1,0 +1,63 @@
+/* events pages */
+.events {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+
+    .logo {
+        padding-top: 5%;
+        position: absolute;
+        width: 100%;
+    }
+
+    .event-list {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        overflow-x: auto;
+
+        .event {
+            width: 40%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            padding: 20% 0;
+            color: var(--white);
+
+            p:first-child {
+                color: var(--gray) !important;
+                font-family: HumanistBt;
+            }
+
+            p:not(:last-child) {
+                color: var(--brown);
+                font-family: HumanistBt;
+            }
+
+            h1 {
+                font-size: 4em;
+                font-weight: 500;
+                margin: 0;
+                font-family: Typewriter;
+            }
+        }
+
+        #event1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe2b90d2cc28fd4a80_accra-p-500.jpg);
+        }
+
+        #event2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65e86d89c0ebe6000d4a549a_nairobi_pavilion_2024.jpg);
+        }
+
+        #event3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe4fa225ceb84e736c_Zanzibar-p-500.jpg);
+        }
+
+        #event4 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe5863a791395eba11_Addis.jpg);
+        }
+    }
+}

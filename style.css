@@ -186,6 +186,7 @@ header{
         justify-content: center;
         text-align: center;
         padding-top: 10%;
+        font-family: Typewriter;
 
         img {
             width: 200px;
@@ -253,6 +254,10 @@ footer{
     z-index: 1;
     top: 10%;
 
+    a{
+        text-decoration: none;
+    }
+
     i {
         color: var(--gray);
         border-radius: 50%;
@@ -269,527 +274,6 @@ footer{
         color: var(--white);
         font-size: 25px;
     }
-}
-
-/* menu page */
-.menus{
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    
-
-    .logo {
-        position: absolute;
-        padding-top: 5%;
-        width: 100%;
-    }
-
-    .menu-container {
-        display: flex;
-        width: 100%;
-        height: 100%;
-
-        .menu {
-            padding: 21% 0;
-            width: 50%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .menu:first-child {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c34fee7c31fcb2f8c3700b_001-p-1080.jpg);
-        }
-
-        .menu:last-child {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65e5a29a2a2b1c4a493fff75_ankolegrill_Kilimani-Nights-p-500.jpg);
-        }
-
-        h2 {
-            color: var(--orange);
-            font-size: 2em;
-            font-weight: 400;
-            margin-top: 0;
-        }
-
-        h1 {
-            color: var(--white);
-            font-size: 3em;
-            margin: 0;
-        }
-
-        p {
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        a {
-            text-decoration: none;
-        }
-    }
-}
-
-/* single menu page */
-.single-menu{
-    width: 100%;
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-
-    header{
-        margin: 0;
-        left: 5%;
-    }
-
-    .left {
-        width: 50%;
-        text-align: center;
-        justify-content: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65c4760165c03d467b650bcb_1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        padding-top: 5%;
-        color: var(--white);
-
-        h2 {
-            margin-top: 10%;
-            font-weight: 700;
-        }
-
-        h1 {
-            color: var(--orange);
-            font-size: 70px;
-            font-weight: 600;
-            margin-bottom: 0;
-            padding-bottom: 1em;
-        }
-
-    }
-
-    .right {
-        width: 50%;
-        background-color: var(--black);
-        color: var(--white);
-        overflow-y: auto;
-        scroll-behavior: smooth;
-        scrollbar-color: var(--black), var(--gray);
-        scrollbar-width: thin;
-        padding: 0 3%;
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            margin: 2% auto;
-            width: 70%;
-
-            a {
-                text-decoration: none;
-                color: var(--white);
-                cursor: pointer;
-            }
-
-            a:hover {
-                color: var(--brown);
-            }
-        }
-
-        .foods {
-            h2 {
-                font-weight: 600;
-                color: #B34215;
-            }
-
-            .priced,
-            .imaged {
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                margin: 10px 0;
-
-                .imaged-cont {
-                    display: flex;
-                    gap: 5%;
-
-                    img {
-                        width: 100px;
-                        height: 100px;
-                        object-fit: cover;
-                        border-radius: 50%;
-                    }
-
-                    h3 {
-                        margin: 0;
-                    }
-                }                   
-            }
-        }
-    }
-
-}
-
-/* review page */
-.reviews{
-    width: 100%;
-    background-color: var(--black);
-    color: var(--white);
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    .heading {
-        padding-top: 5%;
-
-        h1 {
-            font-size: 50px;
-            font-weight: 500;
-        }
-    }
-
-    .content {
-        display: flex;
-        width: 50%;
-        margin: 0% auto;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        padding: 2em;
-
-        .prev, .next{
-            cursor: pointer;
-            position: relative;
-            user-select: none;
-            display: flex;
-            text-decoration: none;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .prev i, .next i{
-            display: inline-block;
-            color: var(--gray);
-            font-size: 30px;
-            cursor: pointer;
-            position: relative;
-            z-index: 2;
-        }
-
-        .testimonials {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-
-            .testimony {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                position: relative;
-                padding: 5em 2em;
-
-                i {
-                    font-size: 30px;
-                    color: var(--orange);
-                }
-
-                i:first-child {
-                    position: absolute;
-                    top: 2em;
-                    left: 0%;
-                    font-size: 2em;
-                    align-self: flex-start;
-                }
-
-                i:last-child {
-                    position: absolute; 
-                    bottom: 2em; 
-                    right: 0;
-                    align-self: flex-end;
-                }
-
-                .text{
-                    width: 100%;
-                }           
-            }
-
-            .testimony.active{
-                display: flex;
-            }           
-        }
-    }
-
-}
-
-/* events pages */
-.events{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    text-align: center;
-
-    .logo{
-        padding-top: 5%;
-        position: absolute;
-        width: 100%;
-    }
-
-    .event-list {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        overflow-x: auto;
-
-        .event {
-            width: 40%;
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-size: cover;
-            padding: 20% 0;
-            /* border: solid var(--white); */
-            color: var(--white);
-
-            p:first-child {
-                color: var(--gray) !important;
-            }
-
-            p:not(:last-child){
-                color: var(--brown); 
-            }
-
-            h1{
-                font-size: 4em;
-                font-weight: 500;
-                margin: 0;
-            }
-        }
-
-        #event1 {
-            background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe2b90d2cc28fd4a80_accra-p-500.jpg);
-        }
-
-        #event2 {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65e86d89c0ebe6000d4a549a_nairobi_pavilion_2024.jpg);
-        }
-
-        #event3 {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe4fa225ceb84e736c_Zanzibar-p-500.jpg);
-        }
-
-        #event4 {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.prod.website-files.com/65aa1f78e2380ad0548de50d/65d4a8fe5863a791395eba11_Addis.jpg);
-        }
-    }
-}
-
-/* reservation page */
-.reservation{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-
-    .heading {
-        width: 50%;
-        text-align: center;
-        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(images/gudflower.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        align-items: center;
-        padding: 10% 0;
-
-        h2{
-            color: var(--white);
-            font-size: 2em;
-            font-weight: 500;
-        }
-
-        h1{
-            color: var(--orange);
-            font-size: 5em;
-            font-weight: 500;
-            margin-top: 2%;
-        }
-    }
-
-    .form {
-        width: 50%;
-        background-color: var(--black);
-        color: var(--white);
-        padding: 2% 0 0;
-        
-
-        form {
-            width: 80%;
-            margin: auto;
-            height: 80%;
-            box-shadow: 1px 1px 1px 1px rgba(78, 78, 78, 0.2), -1px -1px 1px 2px rgba(78, 78, 78, 0.2);
-            /* border: 1px solid gray; */
-            padding: 3% 5% 3%;
-            border-radius: 40px;
-
-            input, 
-            select, 
-            button{
-                width: 100%;
-                height: 50px;
-                margin: 2% 0;
-                padding: 5px;
-            }
-
-            input{
-                background-color: var(--black);
-                color: var(--white);
-                outline: greenyellow;
-                border: 1px solid var(--gray);
-            }
-
-            input[type="time"]::-webkit-calendar-picker-indicator {
-                filter: invert(100%);
-            }
-
-            input[type="date"]::-webkit-calendar-picker-indicator{
-                filter: invert(100%);
-            }
-
-            select{
-                background-color: var(--black);
-                color: var(--gray);
-            }
-
-            button{
-                background-color: var(--brown);
-                border: none;
-                border-radius: 20px;
-                
-            }
-        }
-    }
-
-}
-
-.contacts{
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/contact.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    padding: 5% 0;
-
-    .branches{
-        display: flex;
-        justify-content: center;
-        margin-top: 5%;
-        gap: 2%;
-
-        .location{
-            padding: 2%;
-            border: 1px solid var(--white);
-            color: var(--white);
-            text-align: start;
-            width: 30%;
-
-            p{
-                font-weight: 600;
-            }
-            a{
-                text-decoration: none;
-                color: var(--white);
-            }
-        }
-    }
-}
-
-.live{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    text-align: center;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(images/live.webp);
-    background-position: top;
-    background-size: cover;
-
-    .left{
-        width: 50%;
-        padding: 5% 0;
-
-        .logo{
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        h2{
-            color: var(--white);
-            font-size: 2em;
-            margin-top: 20%;
-            font-size: 2em;
-            font-weight: 500;
-            margin-bottom: 0;
-        }
-
-        h1{
-            color: var(--orange);
-            font-size: 4em;
-            margin-top: 0;
-        }
-
-        header{
-            margin-left: 5%;
-        }
-    }
-
-    .right{
-        width: 50%;
-
-        .single-performance{
-            width: 80%;
-            margin: 2% auto;
-            display: flex;
-            align-items: center;
-            text-align: start;
-            gap: 5%;
-
-            img{
-                width: 300px;
-                height: 300px;
-                object-position: center;
-                object-fit: contain;
-                border-radius: 20px;
-            }
-
-            p:first-child{
-                color: var(--orange);
-            }
-
-            p:last-child{
-                color: var(--white);
-                font-size: 24px;
-            }
-        }
-    }
-}
-
-.single-live{
-    width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(https://cdn.prod.website-files.com/65aa1f79e2380ad0548de567/67e3e65e75e1622a029e77b9_%40ankolegrill%20Live%2042.jpg);
-    height: 100vh;
-    display: flex;
-    text-align: center;
-    background-position: top;
-    background-size: cover;
-    overflow-y: auto;
 }
 
 @media  screen and (max-width: 700px)  {
@@ -854,6 +338,31 @@ footer{
         }
     }
 
+    .single-live {
+        width: 100%;
+        height: 100vh !important;
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .text-container{
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            text-align: start;
+
+            h1 {
+                font-size: 3em !important;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        
+    }
+
 
     .imaged img{
         width: 50px;
@@ -903,7 +412,7 @@ footer{
     }
 }
 
-@media only screen and (max-width:990px) and (min-width: 701px) {
+@media only screen and (max-width:1024px) and (min-width: 701px) {
     .menus .menu-container, .single-menu, .reservation, .live {
         display: block;
         overflow-y: auto;
@@ -924,6 +433,31 @@ footer{
     .live .right,
     .slide{
         width: 100%;
+    }
+
+    .single-live {
+        width: 100%;
+        height: 100vh !important;
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .text-container {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            text-align: start;
+
+            h1 {
+                font-size: 1em;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
     }
 
     .live .right .single-performance{

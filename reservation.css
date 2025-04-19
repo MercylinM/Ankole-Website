@@ -1,0 +1,87 @@
+/* reservation page */
+.reservation {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .heading {
+        width: 50%;
+        text-align: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(images/gudflower.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        align-items: center;
+        padding: 10% 0;
+
+        h2 {
+            color: var(--white);
+            font-size: 2em;
+            font-weight: 500;
+        }
+
+        h1 {
+            color: var(--orange);
+            font-size: 5em;
+            font-weight: 500;
+            margin-top: 2%;
+        }
+    }
+
+    .form {
+        width: 50%;
+        background-color: var(--black);
+        color: var(--white);
+        padding: 2% 0 0;
+
+
+        form {
+            width: 80%;
+            margin: auto;
+            height: 80%;
+            box-shadow: 1px 1px 1px 1px rgba(78, 78, 78, 0.2), -1px -1px 1px 2px rgba(78, 78, 78, 0.2);
+            padding: 3% 5% 3%;
+            border-radius: 40px;
+
+            input,
+            select,
+            button {
+                width: 100%;
+                height: 50px;
+                margin: 2% 0;
+                padding: 5px;
+            }
+
+            input {
+                background-color: var(--black);
+                color: var(--white);
+                border: 1px solid var(--gray);
+            }
+
+            input[type="time"]::-webkit-calendar-picker-indicator {
+                filter: invert(100%);
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                filter: invert(100%);
+            }
+
+            input:hover{
+                outline: greenyellow solid 1px !important;
+            }
+
+            select {
+                background-color: var(--black);
+                color: var(--gray);
+            }
+
+            button {
+                background-color: var(--brown);
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

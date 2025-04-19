@@ -1,0 +1,105 @@
+/* review page */
+.reviews {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .heading {
+        padding-top: 5%;
+
+        h1 {
+            font-size: 50px;
+            font-weight: 500;
+            font-family: Typewriter;
+        }
+    }
+
+    .content {
+        display: flex;
+        width: 50%;
+        margin: 0% auto;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 0 2em;
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prev i,
+        .next i {
+            display: inline-block;
+            color: var(--gray);
+            font-size: 30px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonials {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            .testimony {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                padding: 5em 2em;
+
+                i {
+                    font-size: 30px;
+                    color: var(--orange);
+                }
+
+                i:first-child {
+                    position: absolute;
+                    top: 2em;
+                    left: 0%;
+                    font-size: 2em;
+                    align-self: flex-start;
+                }
+
+                i:last-child {
+                    position: absolute;
+                    bottom: 2em;
+                    right: 0;
+                    align-self: flex-end;
+                }
+
+                .text {
+                    width: 100%;
+                    line-height: 2em;
+                    font-weight: 600;
+
+                    p:nth-child(3){
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .testimony.active {
+                display: flex;
+            }
+        }
+    }
+
+}
